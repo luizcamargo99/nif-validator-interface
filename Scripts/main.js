@@ -1,11 +1,21 @@
+//PURE JAVASCRIPT VERSION
+
 const api_endpoint = 'https://nifvalidator-api.azurewebsites.net/Validate?nif=[NIF_FIELD]';
 
 async function validate() {
     document.getElementById('validate-result').style.display = 'none';
     let nif_value = document.getElementById('nif-value').value;
-    const endpoint_with_parameter = api_endpoint.replace('[NIF_FIELD]', nif_value);
-    const response = await fetch(endpoint_with_parameter);
-    handleResponse(response);
+    let is_valid = validateFieldMandatory(nif_value);
+    
+    if (is_valid){
+        const endpoint_with_parameter = api_endpoint.replace('[NIF_FIELD]', nif_value);
+        const response = await fetch(endpoint_with_parameter);
+        handleResponse(response);
+    }
+}
+
+function validateFieldMandatory(nif_value) {
+    return nif_value == '' ? false : true;
 }
 
 async function handleResponse (response_request) {

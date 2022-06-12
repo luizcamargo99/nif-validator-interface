@@ -7,6 +7,7 @@
 
 :root {
     --green: #219642;
+    --red: #D1221D;
 }
 
 body {
@@ -77,6 +78,18 @@ button {
     border-radius: 10rem;
 }
 
+.card-green {
+    background: var(--green);
+}
+
+.card-red {
+    background: var(--red);
+}
+
+.input-mandatory {
+   border: 0.15rem solid red;
+}
+
 #validate-nif {
     align-items: center;
     gap: 2rem;
@@ -100,17 +113,12 @@ button {
 #validate-result {
     gap: 2rem;
     height: 4rem;
-    width: 21rem;
+    width: 30rem;
     background: #595959;
     border-radius: 0.5rem;
     justify-content: center;
     align-items: center;
-    display: none;
     border: 0.1rem solid;
-}
-
-#request-error {
-    display: none;
 }
 
 #validity {
@@ -119,3 +127,8 @@ button {
     border-radius: 0.5rem;
     border: 0.1rem solid;
 }
+
+#nif-type {
+    gap: .2rem;
+}
+
