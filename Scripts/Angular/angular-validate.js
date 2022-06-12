@@ -2,6 +2,7 @@ angular.module('app').controller('ValidateController', ['$scope', '$http', funct
 
     $scope.Initializing = function() {
         $scope.HasProcessed = false;
+        $scope.Year = new Date().getFullYear();
         $scope.ResponseApi = {};
     }
 

@@ -24,7 +24,7 @@
         </header>
         <main>
             <div id="validate-nif" class="column section">            
-                <span style="font-size: 1.5rem; text-align: center;">
+                <span style="font-size: 2rem; text-align: center;">
                     Validate a NIF (Portuguese TIN) in a few seconds and completely free of charge.
                 </span> 
                 <div class="row center" style="gap: 1rem;">
@@ -49,9 +49,23 @@
             </div>
             <div id="api" class="column section center">
                 <span class="title">API For Developers</span>
-                <span style="text-align: center;">If you are a software developer and want to integrate NIF Validator with your application. Access the official documentation here.</span>
+                <span style="text-align: center;">If you are a software developer and want to integrate NIF Validator with your application. Access the official documentation, here.</span>
+                <span style="text-align: center;">Example of valid request response:</span>
+                <code style="background: rgb(97, 97, 97); padding: .5rem; border-radius: .3rem; text-align: center;">{
+                    "isValid": true,
+                    "type": "Legal Person",
+                    "errorMessage": null
+                }</code>
+            </div>
+            <div id="about" class="column section center">
+                <span class="title">About the Creator</span>
+                <span style="text-align: center;">I'm Luiz Camargo, a Brazilian Full Stack Developer passionate for solving problems and create new things. </span>
+                <span style="text-align: center;">it's a pleasure to have you here!</span>
             </div>
         </main>
+        <footer class="row center">
+            <span>© Copyright {{Year}} | Created by Luiz Camargo </span>
+        </fo>
     </div>
 
 </body>
