@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Images/bandeira.png">
     <link rel="stylesheet" href="./Styles/global.css">
-
+    <script src="./Scripts/main.js"></script>
     <title>NIF Validator | Portugal </title>
 </head>
 <body>
@@ -25,14 +25,15 @@
             </span>
             <div class="row" style="gap: 1rem;">
                 <div id="portugal-flag" class="circle"></div>
-                <input type="text" maxlength="9" placeholder="Enter the NIF you want to validate">
-                <button>Validate</button>
+                <input type="text" maxlength="9" placeholder="Enter the NIF you want to validate" id="nif-value">
+                <button onclick="validate()">Validate</button>
             </div>
+            <span id="request-error">There was an error trying to perform the validation, please contact our team, here.</span>
             <div id="validate-result" class="row">
                 <span id="validity"></span>
                 <div id="nif-type">
-                    <span>Type:</span>
-                    <span></span>
+                    <span>Type: </span>
+                    <span id="type-result"></span>
                 </div>
                 <span id="error-message"></span>
             </div>
