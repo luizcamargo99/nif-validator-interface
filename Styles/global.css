@@ -90,6 +90,14 @@ button {
    border: 0.15rem solid red;
 }
 
+.title {
+    font-size: 2rem;
+}
+
+.section {
+    margin-top: 2rem;
+}
+
 #validate-nif {
     align-items: center;
     gap: 2rem;
@@ -104,8 +112,6 @@ button {
 }
 
 #portugal-flag {
-    background-image: url(../Images/bandeira.png);
-    background-size: cover;
     height: 2rem;
     width: 2rem;
 }
@@ -132,3 +138,7 @@ button {
     gap: .2rem;
 }
 
+#api {
+    background: #0a0a0ce1;    
+    align-items: center;
+}

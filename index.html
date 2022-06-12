@@ -16,11 +16,11 @@
     <div ng-controller="ValidateController as ctrlValidate">      
         <header class="row">
             <span style="font-size: 1.3rem;">NIF Validator</span>
-            <ul class="row">
+            <!-- <ul class="row">
                 <li><a href="#validate-nif">Validate NIF</a></li>
                 <li><a href="#api">API For Developers</a></li>
                 <li><a href="#about">About the Creator</a></li>   
-            </ul>
+            </ul> -->
         </header>
         <main>
             <div id="validate-nif" class="column">            
@@ -28,7 +28,7 @@
                     Validate a NIF (Portuguese TIN) in a few seconds and completely free of charge.
                 </span> 
                 <div class="row" style="gap: 1rem;">
-                    <div id="portugal-flag" class="circle"></div>
+                    <img src="./Images/bandeira.png" alt="portugal-flag" id="portugal-flag" class="circle">
                     <input type="text" maxlength="9" ng-model="NifValue" ng-class="{'input-mandatory': NifValue == '' || NifFieldIsBlank}" placeholder="Enter the NIF you want to validate" ng-change="ValidateFieldMandatory()">
                     <button ng-click="Validate()">Validate</button>
                 </div>
@@ -46,6 +46,9 @@
                     </div>
                     <span id="error-message">{{ResponseApi.errorMessage}}</span>
                 </div>
+            </div>
+            <div id="api" class="column section">
+                <span class="title">API For Developers</span>
             </div>
         </main>
     </div>
