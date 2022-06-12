@@ -10,11 +10,13 @@
     --red: #D1221D;
 }
 
+html,
 body {
     font-family: 'Mukta', sans-serif;
     background: #1E1F24;
     color: #fff;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 header {
@@ -66,11 +68,13 @@ button {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
 .column {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
@@ -96,6 +100,12 @@ button {
 
 .section {
     margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
 }
 
 #validate-nif {
@@ -105,10 +115,12 @@ button {
 
 #validate-nif input {
     width: 20rem;
+    height: 2rem;
 }
 
 #validate-nif button {
     width: 5rem;
+    height: 2rem;
 }
 
 #portugal-flag {
@@ -141,4 +153,5 @@ button {
 #api {
     background: #0a0a0ce1;    
     align-items: center;
+    gap: 2rem;
 }
