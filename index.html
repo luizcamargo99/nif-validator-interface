@@ -24,12 +24,12 @@
                 </span> 
                 <form class="row center" style="gap: 1rem;">
                     <img src="./Images/bandeira.png" alt="portugal-flag" id="portugal-flag" class="circle">
-                    <input type="text" required maxlength="9" ng-model="NifValue" ng-class="{'input-mandatory': !NifValue}" placeholder="Enter the NIF you want to validate">
+                    <input type="text" required maxlength="9" ng-model="NifValue" ng-class="{'input-mandatory': NifValue == null}" placeholder="Enter the NIF you want to validate">
                     <button ng-click="ValidateNif()">{{ IsProcessing ? 'Loading...' : 'Validate' }}</button>
                 </form>
                 <span ng-if="ShowErrorRequest">There was an error trying to perform the validation, please contact our team, here.</span>
                 <div id="validate-result" class="row" ng-if="ResponseApi">                 
-                    <span id="validity" ng-class="{'card-green': ResponseApi.isValid , 'card-red': !ResponseApi.isValid} ">{{ResponseApi.isValid ? 'VALID NIF!' : 'INVALID NIF!'}}</span>
+                    <span id="validity" ng-class="{'card-green': ResponseApi.isValid , 'card-red': ResponseApi.isValid == false} ">{{ResponseApi.isValid ? 'VALID NIF!' : 'INVALID NIF!'}}</span>
                     <div>
                         <span>NIF: </span>
                         <span>{{SearchNif}}</span>
