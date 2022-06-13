@@ -160,3 +160,11 @@ button {
     background: #0a0a0ce1;    
     align-items: center;    
 }
+
+#my-name {
+    color: var(--green);
+}
+
+#my-name:hover {
+    text-decoration: underline;
+}
