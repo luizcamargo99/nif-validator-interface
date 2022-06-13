@@ -1,17 +1,15 @@
 angular.module('app').controller('ValidateController', ['$scope', '$http', function ($scope, $http) {    
 
-    $scope.Initializing = function() {
-        $scope.HasProcessed = false;
-        $scope.Year = new Date().getFullYear();
-        $scope.ResponseApi = {};
+    $scope.Initialize = function() {
+        $scope.IsProcessing = false;
+        $scope.CurrentYear = new Date().getFullYear();
     }
 
-    $scope.Validate = function() {
-        let isValid = $scope.ValidateFieldMandatory();
-
-        if (isValid) {
+    $scope.ValidateNif = function() {       
+        if ($scope.IsProcessing == false && $scope.NifValue) {
+            $scope.IsProcessing = true;
             $scope.RequestApi();
-        }   
+        } 
     }
 
     $scope.RequestApi = function() {
@@ -21,17 +19,11 @@ angular.module('app').controller('ValidateController', ['$scope', '$http', funct
           }).then(function successCallback(response) {
             $scope.ResponseApi = response.data;
             $scope.SearchNif = $scope.NifValue;
-            $scope.HasProcessed = true;    
+            $scope.IsProcessing = false;   
           }, function errorCallback() {
             $scope.ShowErrorRequest = true;
           });
     }
 
-    $scope.ValidateFieldMandatory = function() {
-        let isValid = !$scope.NifValue ? false : true;
-        $scope.NifFieldIsBlank = !isValid;
-        return isValid;
-    }
-
-    $scope.Initializing();    
+    $scope.Initialize();    
 }]);
