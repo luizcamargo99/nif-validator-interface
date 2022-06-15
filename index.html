@@ -29,7 +29,7 @@
                 </form>
                 <span ng-if="ShowErrorRequest">There was an error trying to perform the validation, please contact our team, here.</span>
                 <div id="validate-result" class="row" ng-if="ResponseApi">                 
-                    <span id="validity" ng-class="{'card-green': ResponseApi.isValid , 'card-red': ResponseApi.isValid == false} ">{{ResponseApi.isValid ? 'VALID NIF!' : 'INVALID NIF!'}}</span>
+                    <span id="validity" ng-class="{'card-green': ResponseApi.isValid , 'card-red': ResponseApi.isValid == false} ">{{ResponseApi.isValid ? 'VALID NIF' : 'INVALID NIF'}}</span>
                     <div>
                         <span>NIF: </span>
                         <span>{{SearchNif}}</span>
